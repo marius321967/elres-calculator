@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="container">
+        <h5>Electrical wiring temperature/resistance calculator</h5>
+        <p>
+            The tool is used to calculate the following desired properties for different electrical wiring materials:
+        </p>
+
+        <ul>
+            <li>electrical resistance</li>
+            <li>wire length</li>
+            <li>wire diameter</li>
+            <li>operating temperature</li>
+        </ul>
+
+        <div>
+            <calculator></calculator>
+        </div>
+    </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Calculator from './Calculator'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+    name: 'Home',
+    components: { Calculator }
 }
 </script>
