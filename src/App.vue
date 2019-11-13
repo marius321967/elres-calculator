@@ -24,4 +24,7 @@ export default {
 .navigation-container {
     margin-bottom: 1rem;
 }
+.router-link-active {
+    @extend .active;
+}
 </style>
