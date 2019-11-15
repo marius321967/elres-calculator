@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Temperature coefficient determines how much the resistivity &rho; changes in a conductor when its temperature increases.</p>
+        <p>Temperature coefficient determines how much the resistivity &rho; changes in a conductor as its temperature increases.</p>
         
         <div class="row">
             <div class="col-md-4">
