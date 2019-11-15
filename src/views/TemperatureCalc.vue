@@ -43,6 +43,7 @@
                 <div class="form-group">
                     <label for="length_input">Conductor length, m</label>
                     <input type="text" class="form-control form-control-sm" id="length_input" v-model="length" />
+                    <small>Mathematical expressions are allowed</small>
                 </div>
             </div>
             
@@ -50,6 +51,7 @@
                 <div class="form-group">
                     <label for="area_input">Conductor cross-cut area a, m<sup>2</sup> </label>
                     <input type="text" class="form-control form-control-sm" id="area_input" v-model="area" />
+                    <small>Mathematical expression are allowed</small>
                 </div>
             </div>
             
@@ -76,7 +78,9 @@
 </template>
 
 <script>
-import mathjs from 'mathjs'
+import { evaluate } from 'mathjs'
+
+const mathjs_err = '(error during evaluation)';
 
 export default {
     data: () => ({
@@ -99,8 +103,8 @@ export default {
                 return this.r1 / (this.temperature_coeff * this.r0) - 1/this.temperature_coeff + (this.r1 * this.t0) / this.r0;
         },
         r0() {
-            if (this.resistivity && this.length && this.area) 
-                return this.resistivity * this.length / this.area;
+            if (this.resistivity && this.length_eval && this.area_eval) 
+                return this.resistivity * this.length_eval / this.area_eval;
         },
         resistivity() {
             if (this.selected_material !== null)
@@ -116,6 +120,16 @@ export default {
             if (this.r0 && this.r1 && this.t0 && this.temperature_coeff == 0) { 
                 return 'We were unable to measure a precise temperature coefficient of resistivity for the selected material, therefore we cannot pinpoint a realiable temperature value that your conductor was at';
             }
+        },
+
+        // mathjs evaluated expressions
+        area_eval() {
+            if (this.area) 
+                try { return evaluate(this.area) } catch (e) {}
+        },
+        length_eval() {
+            if (this.length) 
+                try { return evaluate(this.length) } catch (e) {}
         }
     }
 }
