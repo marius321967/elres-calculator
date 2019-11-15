@@ -10,13 +10,13 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="resistance_input">Reference temperature &Tau;<sub>0</sub>, (K, &deg;C)</label>
+                    <label for="resistance_input">Reference temperature T<sub>0</sub>, (K, &deg;C)</label>
                     <input type="text" class="form-control form-control-sm" v-model="t0" />
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="resistance_input">Resistivity &rho; of material at &Tau;<sub>0</sub>, &ohm;</label>
+                    <label for="resistance_input">Resistivity &rho; of material at T<sub>0</sub>, &ohm;</label>
                     <input type="text" class="form-control form-control-sm" v-model="r0" />
                 </div>
             </div>
@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="resistance_input">Target temperature &Tau;<sub>1</sub>, (K, &deg;C)</label>
+                    <label for="resistance_input">Target temperature T<sub>1</sub>, (K, &deg;C)</label>
                     <input type="text" class="form-control form-control-sm" v-model="t1" />
                 </div>
             </div>
@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="">Result: resistivity &rho; at temperature &Tau;<sub>1</sub>, &ohm;</label>
+                    <label>Result: resistivity &rho; at temperature T<sub>1</sub>, &ohm;</label>
                     <input type="text" disabled class="form-control form-control-sm" :value="r1" />
                 </div>
             </div>
