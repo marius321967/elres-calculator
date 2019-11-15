@@ -12,6 +12,8 @@
             <li>operating temperature</li>
         </ul>
 
+        <p><small>Author: Marius Drąsutis, IFF-6/4</small></p>
+
         <div>
             <calculator></calculator>
         </div>
