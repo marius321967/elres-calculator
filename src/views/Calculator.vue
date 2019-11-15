@@ -11,16 +11,22 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <router-link class="nav-link" to="resistivity">
                         <strong>&rho;</strong>
                         Resistivity calculator
-                    </a>
+                    </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <router-link class="nav-link" to="resistance">
+                        <strong>R</strong>
+                        Resistance calculator
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="temperature">
                         <strong>&Tau;</strong>
                         Temperature calculator
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </div>
