@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h5>From base temperature</h5>
+        <h5>At temperature</h5>
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
